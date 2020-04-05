@@ -468,7 +468,7 @@ problem_mapping = {
     "Chapter 06: Strings": {
         "6.00 Bootcamp: Strings": {
             "C++: is_string_palindromic.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: IsStringPalindromic.java": {
@@ -482,7 +482,7 @@ problem_mapping = {
         },
         "6.01 Interconvert strings and integers": {
             "C++: string_integer_interconversion.cc": {
-                "passed": 0,
+                "passed": 15002,
                 "total": 15002
             },
             "Java: StringIntegerInterconversion.java": {
@@ -496,7 +496,7 @@ problem_mapping = {
         },
         "6.02 Base conversion": {
             "C++: convert_base.cc": {
-                "passed": 0,
+                "passed": 20001,
                 "total": 20001
             },
             "Java: ConvertBase.java": {
@@ -524,7 +524,7 @@ problem_mapping = {
         },
         "6.04 Replace and remove": {
             "C++: replace_and_remove.cc": {
-                "passed": 0,
+                "passed": 501,
                 "total": 501
             },
             "Java: ReplaceAndRemove.java": {
@@ -552,7 +552,7 @@ problem_mapping = {
         },
         "6.06 Reverse all the words in a sentence": {
             "C++: reverse_words.cc": {
-                "passed": 0,
+                "passed": 103,
                 "total": 103
             },
             "Java: ReverseWords.java": {
@@ -566,7 +566,7 @@ problem_mapping = {
         },
         "6.07 The look-and-say problem": {
             "C++: look_and_say.cc": {
-                "passed": 0,
+                "passed": 40,
                 "total": 40
             },
             "Java: LookAndSay.java": {
@@ -580,7 +580,7 @@ problem_mapping = {
         },
         "6.08 Convert from Roman to decimal": {
             "C++: roman_to_integer.cc": {
-                "passed": 0,
+                "passed": 3999,
                 "total": 3999
             },
             "Java: RomanToInteger.java": {
@@ -608,7 +608,7 @@ problem_mapping = {
         },
         "6.10 Write a string sinusoidally": {
             "C++: snake_string.cc": {
-                "passed": 0,
+                "passed": 500,
                 "total": 500
             },
             "Java: SnakeString.java": {
@@ -1980,7 +1980,7 @@ problem_mapping = {
         },
         "15.02 Compute all mnemonics for a phone number": {
             "C++: phone_number_mnemonic.cc": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Java: PhoneNumberMnemonic.java": {
