@@ -1,22 +1,46 @@
+#include <vector>
+
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
+
+using std::vector;
+using std::rotate;
+using std::length_error;
+
 class Queue {
- public:
-  Queue(size_t capacity) {}
+public:
+  explicit Queue(size_t capacity) : arr_(capacity), head_index_(0), 
+    tail_index_(0), curr_size_(0) { 
+    // Do nothing
+  }
   void Enqueue(int x) {
-    // TODO - you fill in here.
-    return;
+    if (curr_size_ == arr_.size()) {
+      rotate(arr_.begin(), arr_.begin() + head_index_, arr_.end());
+      head_index_ = 0, tail_index_ = curr_size_;
+      arr_.resize(arr_.size() * 2);
+    }
+    arr_[tail_index_] = x;
+    tail_index_ = (tail_index_ + 1) % arr_.size();
+    ++curr_size_;
   }
-  int Dequeue() {
-    // TODO - you fill in here.
-    return 0;
+  int Dequeue() noexcept(false) {
+    if (!curr_size_) {
+      throw length_error("Empty Queue");
+    }
+    --curr_size_;
+    int rv = arr_[head_index_];
+    head_index_ = (head_index_ + 1) % arr_.size();
+    return rv;
   }
-  int Size() const {
-    // TODO - you fill in here.
-    return 0;
+  size_t Size() const {
+    return curr_size_;
   }
+private:
+  size_t head_index_, tail_index_, curr_size_;
+  vector<int> arr_;
 };
+
 struct QueueOp {
   enum class Operation { kConstruct, kDequeue, kEnqueue, kSize } op;
   int argument;

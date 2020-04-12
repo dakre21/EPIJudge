@@ -1,22 +1,43 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <stack>
 
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
+
 using std::length_error;
+using std::stack;
+
 class Queue {
- public:
-  void Enqueue(int x) {
-    // TODO - you fill in here.
-    return;
+public:
+  void Enqueue(int x) noexcept(false) {
+    enq_.emplace(x);
   }
   int Dequeue() {
-    // TODO - you fill in here.
-    return 0;
+    if (deq_.empty()) {
+      SetDeq();
+    }
+
+    if (deq_.empty()) {
+      throw length_error("Empty Queue");
+    }
+
+    int rv = deq_.top();
+    deq_.pop();
+    return rv;
   }
+private:
+  void SetDeq() {
+    while (!enq_.empty()) {
+      deq_.emplace(enq_.top());
+      enq_.pop();
+    }
+  }
+  stack<int> enq_, deq_;
 };
+
 struct QueueOp {
   enum class Operation { kConstruct, kDequeue, kEnqueue } op;
   int argument;

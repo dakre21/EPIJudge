@@ -1,28 +1,33 @@
 #include <stdexcept>
+#include <vector>
 
 #include "test_framework/generic_test.h"
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
+
 using std::length_error;
+using std::vector;
+using std::max_element;
 
 class Stack {
- public:
+public:
   bool Empty() const {
-    // TODO - you fill in here.
-    return true;
+    return stack_.empty();
   }
   int Max() const {
-    // TODO - you fill in here.
-    return 0;
+    auto it = max_element(stack_.begin(), stack_.end());
+    return *it;
   }
   int Pop() {
-    // TODO - you fill in here.
-    return 0;
+    int last = stack_.back();
+    stack_.pop_back();
+    return last;
   }
   void Push(int x) {
-    // TODO - you fill in here.
-    return;
+    stack_.emplace_back(x);
   }
+private:
+  vector<int> stack_;
 };
 struct StackOp {
   std::string op;

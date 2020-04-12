@@ -1,14 +1,34 @@
+#include <array>
+
 #include "list_node.h"
 #include "test_framework/generic_test.h"
+
+using std::array;
+
 shared_ptr<ListNode<int>> EvenOddMerge(const shared_ptr<ListNode<int>>& L) {
-  // TODO - you fill in here.
-  return nullptr;
+    if (L == nullptr) {
+        return nullptr;
+    }
+
+    auto even_head = make_shared<ListNode<int>>(ListNode<int>(0, nullptr));
+    auto odd_head = make_shared<ListNode<int>>(ListNode<int>(0, nullptr));
+    array<shared_ptr<ListNode<int>>, 2> tails = { even_head, odd_head };
+
+    int turn = 0;
+    for (auto it = L; it; it = it->next) {
+        tails[turn]->next = it;
+        tails[turn] = tails[turn]->next;
+        turn ^= 1;
+    }
+    tails[1]->next = nullptr;
+    tails[0]->next = odd_head->next;
+    return even_head->next;
 }
 
 int main(int argc, char* argv[]) {
-  std::vector<std::string> args{argv + 1, argv + argc};
-  std::vector<std::string> param_names{"L"};
-  return GenericTestMain(args, "even_odd_list_merge.cc",
-                         "even_odd_list_merge.tsv", &EvenOddMerge,
-                         DefaultComparator{}, param_names);
+    std::vector<std::string> args{argv + 1, argv + argc};
+    std::vector<std::string> param_names{"L"};
+    return GenericTestMain(args, "even_odd_list_merge.cc",
+                           "even_odd_list_merge.tsv", &EvenOddMerge,
+                           DefaultComparator{}, param_names);
 }

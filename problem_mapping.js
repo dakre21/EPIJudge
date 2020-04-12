@@ -690,7 +690,7 @@ problem_mapping = {
         },
         "7.01 Merge two sorted lists": {
             "C++: sorted_lists_merge.cc": {
-                "passed": 0,
+                "passed": 501,
                 "total": 501
             },
             "Java: SortedListsMerge.java": {
@@ -704,7 +704,7 @@ problem_mapping = {
         },
         "7.02 Reverse a single sublist": {
             "C++: reverse_sublist.cc": {
-                "passed": 0,
+                "passed": 210,
                 "total": 210
             },
             "Java: ReverseSublist.java": {
@@ -718,7 +718,7 @@ problem_mapping = {
         },
         "7.03 Test for cyclicity": {
             "C++: is_list_cyclic.cc": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Java: IsListCyclic.java": {
@@ -732,7 +732,7 @@ problem_mapping = {
         },
         "7.04 Test for overlapping lists---lists are cycle-free": {
             "C++: do_terminated_lists_overlap.cc": {
-                "passed": 0,
+                "passed": 106,
                 "total": 106
             },
             "Java: DoTerminatedListsOverlap.java": {
@@ -746,7 +746,7 @@ problem_mapping = {
         },
         "7.05 Test for overlapping lists---lists may have cycles": {
             "C++: do_lists_overlap.cc": {
-                "passed": 0,
+                "passed": 6,
                 "total": 120
             },
             "Java: DoListsOverlap.java": {
@@ -774,7 +774,7 @@ problem_mapping = {
         },
         "7.07 Remove the kth last element from a list": {
             "C++: delete_kth_last_from_list.cc": {
-                "passed": 0,
+                "passed": 306,
                 "total": 306
             },
             "Java: DeleteKthLastFromList.java": {
@@ -816,7 +816,7 @@ problem_mapping = {
         },
         "7.10 Implement even-odd merge": {
             "C++: even_odd_list_merge.cc": {
-                "passed": 0,
+                "passed": 1015,
                 "total": 1015
             },
             "Java: EvenOddListMerge.java": {
@@ -874,7 +874,7 @@ problem_mapping = {
     "Chapter 08: Stacks and Queues": {
         "8.01 Implement a stack with max API": {
             "C++: stack_with_max.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: StackWithMax.java": {
@@ -888,7 +888,7 @@ problem_mapping = {
         },
         "8.02 Evaluate RPN expressions": {
             "C++: evaluate_rpn.cc": {
-                "passed": 0,
+                "passed": 108,
                 "total": 108
             },
             "Java: EvaluateRpn.java": {
@@ -944,7 +944,7 @@ problem_mapping = {
         },
         "8.06 Compute binary tree nodes in order of increasing depth": {
             "C++: tree_level_order.cc": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             },
             "Java: TreeLevelOrder.java": {
@@ -958,7 +958,7 @@ problem_mapping = {
         },
         "8.07 Implement a circular queue": {
             "C++: circular_queue.cc": {
-                "passed": 0,
+                "passed": 65,
                 "total": 65
             },
             "Java: CircularQueue.java": {
@@ -972,7 +972,7 @@ problem_mapping = {
         },
         "8.08 Implement a queue using stacks": {
             "C++: queue_from_stacks.cc": {
-                "passed": 0,
+                "passed": 65,
                 "total": 65
             },
             "Java: QueueFromStacks.java": {
